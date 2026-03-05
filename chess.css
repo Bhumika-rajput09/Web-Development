@@ -1,0 +1,29 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chess{
+    height: 800px;
+    width: 800px;
+    display: grid;
+    /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr  ; */
+    grid-template-rows: repeat(8,1fr);
+    /* same with columns */
+    grid-template-columns: repeat(8, 1fr);
+background-color: aqua;
+border: 2px solid black;
+
+}
+.white{
+    background-color: white;
+}
+.brown{
+    background-color: brown;
+}
