@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+
+        }
+        .img_slider{
+                width: 100%;
+                height: 400px;
+        }
+
+        .my_slide img {
+            width: 100%;
+            height: 400px;
+        }
+        
+        figure{
+            width: 400%;
+            position: relative;
+            left: 0;
+            animation: 25s my_slide infinite;
+        }
+
+        .my_slide{
+            width: 25%;
+            position: relative;
+            float: left;
+
+        }
+    
+        @keyframes my_slide {
+            
+      0%{
+        left: 0;
+      }
+      9%{
+        left: 0%;
+      }
+      18%{
+        left: -100%;
+      }
+      27%{
+        left: -100%;
+      }
+      36%{
+        left: -200%;
+      }
+      45%{
+        left: -200%;
+      }
+      54%{
+        left: -300%;
+      }
+      63%{
+        left: -300%;
+      }
+      72%{
+        left: -200%;
+      }
+      81%{
+        left: -200%;
+      }
+      90%{
+        left: -100%;
+      }
+      99%{
+        left: -100%;
+      }
+      100%{
+        left: 0;
+      }
+
+        }
+    </style>
+
+</head>
+<body>
+
+     <h1>Image SlideShow using HTML and CSS</h1>
+     <br>
+    <div class="img_slider">
+     <figure>
+            <div class="my_slide">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbsoO355bNEEiG8FkFj0uvCxRCrAqxw92JjQ&s" alt="">
+            </div>
+
+
+            <div class="my_slide">
+                    <img src="https://www.w3schools.com/css/img_forest.jpg" alt="">
+            </div>
+
+
+            <div class="my_slide">
+                    <img src="https://modernartgallery.co.in/cdn/shop/files/pai_826868e9-c655-462a-9402-78502f59f08d_525x280.jpg?v=1657131956" alt="">
+            </div>
+
+
+            <div class="my_slide">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMU73G1ID6xd_b_DimMNDz8lkQGeaHhdecbw&s" alt="">
+            </div>
+
+            <!-- <div class="my_slide">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQphG1-uj-Ib2s8l8sxfLAiIBE5Z3obdbQhcQ&s" alt="">
+            </div> -->
+
+     </figure>
+
+    </div>
+
+</body>
+</html>
