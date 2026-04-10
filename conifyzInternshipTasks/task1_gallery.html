@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f6a5a5;
+      padding: 40px 20px;
+      line-height: 1.6;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    /* Gallery Grid */
+    .bhumika_gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .g-item {
+      position: relative;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .g-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .g-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .g-item:hover img {
+      transform: scale(1.08);
+    }
+
+    /* Lightbox */
+    .img_overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .img_overlay:target {
+      display: flex;
+      opacity: 1;
+    }
+
+    .io-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 90vh;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .io-content img {
+      width: 100%;
+      height: auto;
+      max-height: 90vh;
+      display: block;
+    }
+
+    /* Close Button */
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      color: #333;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.2s ease;
+    }
+
+    .close:hover {
+      background: white;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Beautiful Image Gallery</h1>
+  
+  <div class="bhumika_gallery">
+    <a href="#img1" class="g-item">
+      <img src="https://picsum.photos/id/1015/600/400" alt="Mountain Landscape">
+    </a>
+  
+    <a href="#img2" class="g-item">
+      <img src="https://picsum.photos/id/201/600/400" alt="Ocean Sunset">
+    </a>
+    
+    <a href="#img3" class="g-item">
+      <img src="https://picsum.photos/id/237/600/400" alt="Puppy">
+    </a>
+   
+    <a href="#img4" class="g-item">
+      <img src="https://picsum.photos/id/870/600/400" alt="City Lights">
+    </a>
+   
+    <a href="#img5" class="g-item">
+      <img src="https://picsum.photos/id/1016/600/400" alt="Forest Path">
+    </a>
+    
+    <a href="#img6" class="g-item">
+      <img src="https://picsum.photos/id/133/600/400" alt="Coffee">
+    </a>
+  </div>
+
+  <!-- Lightbox Modals -->
+  <div id="img1" class="img_overlay">
+    <div class="io-content">
+      <a href="#" class="close">&times;</a>
+      <img src="https://picsum.photos/id/1015/1200/800" alt="Mountain Landscape">
+    </div>
+  </div>
+
+  <div id="img2" class="img_overlay">
+    <div class="io-content">
+      <a href="#" class="close">&times;</a>
+      <img src="https://picsum.photos/id/201/1200/800" alt="Ocean Sunset">
+    </div>
+  </div>
+
+  <div id="img3" class="img_overlay">
+    <div class="io-content">
+      <a href="#" class="close">&times;</a>
+      <img src="https://picsum.photos/id/237/1200/800" alt="Puppy">
+    </div>
+  </div>
+
+  <div id="img4" class="img_overlay">
+    <div class="io-content">
+      <a href="#" class="close">&times;</a>
+      <img src="https://picsum.photos/id/870/1200/800" alt="City Lights">
+    </div>
+  </div>
+
+  <div id="img5" class="img_overlay">
+    <div class="io-content">
+      <a href="#" class="close">&times;</a>
+      <img src="https://picsum.photos/id/1016/1200/800" alt="Forest Path">
+    </div>
+  </div>
+
+  <div id="img6" class="img_overlay">
+    <div class="io-content">
+      <a href="#" class="close">&times;</a>
+      <img src="https://picsum.photos/id/133/1200/800" alt="Coffee">
+    </div>
+  </div>
+
+  <p style="text-align: center; margin-top: 40px; color: #666; font-size: 14px;">
+    Click any thumbnail to enlarge 
+  </p>
+</body>
+</html>
